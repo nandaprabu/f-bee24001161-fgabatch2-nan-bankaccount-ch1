@@ -25,7 +25,7 @@ function tambahSaldo(){
         alert(`Transaksi Gagal! Anda membatalkan transaksi atau tidak mengisi nominal.\nSaldo Anda Rp. ${saldo.toLocaleString()} -,`);
     } else {
         userInput = Number(userInput);
-        if(typeof userInput === "number" && !isNaN(userInput)){
+        if(typeof userInput === "number" && !isNaN(userInput) && userInput > 0){
             saldo = saldo + userInput;
             alert(`Setoran Uang Berhasil! Saldo Anda Rp. ${saldo.toLocaleString()} -,`)
         } else {
@@ -41,7 +41,7 @@ function kurangiSaldo(){
         alert(`Transaksi Gagal! Anda membatalkan transaksi atau tidak mengisi nominal.\nSaldo Anda Rp. ${saldo.toLocaleString()} -,`);
     } else {
         userInput = Number(userInput);
-        if(typeof userInput === "number" && !isNaN(userInput)){
+        if(typeof userInput === "number" && !isNaN(userInput) && userInput > 0){
             if(saldo < userInput){
                 alert(`Transaksi Gagal! Jumlah saldo anda tidak mencukupi untuk melakukan transaksi\nSaldo Anda Rp. ${saldo.toLocaleString()} -,`)
             } else {
